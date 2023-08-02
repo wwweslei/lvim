@@ -41,3 +41,21 @@ lvim.builtin.which_key.mappings["j"] = {
 
 -- keymap to toggle aerial
 vim.keymap.set('n', '<leader>a', '<cmd>AerialToggle!<CR>')
+
+
+-- trouble
+-- vim.keymap.set("n", "<leader>xx", function() require("trouble").open() end)
+-- vim.keymap.set("n", "<leader>xw", function() require("trouble").open("workspace_diagnostics") end)
+-- vim.keymap.set("n", "<leader>xd", function() require("trouble").open("document_diagnostics") end)
+-- vim.keymap.set("n", "<leader>xq", function() require("trouble").open("quickfix") end)
+-- vim.keymap.set("n", "<leader>xl", function() require("trouble").open("loclist") end)
+-- vim.keymap.set("n", "gR", function() require("trouble").open("lsp_references") end)
+lvim.builtin.which_key.mappings["x"] = {
+  name = "Diagnostics",
+  t = { "<cmd>TroubleToggle<cr>", "trouble" },
+  w = { "<cmd>TroubleToggle workspace_diagnostics<cr>", "workspace" },
+  d = { "<cmd>TroubleToggle document_diagnostics<cr>", "document" },
+  q = { "<cmd>TroubleToggle quickfix<cr>", "quickfix" },
+  l = { "<cmd>TroubleToggle loclist<cr>", "loclist" },
+  r = { "<cmd>TroubleToggle lsp_references<cr>", "references" },
+}

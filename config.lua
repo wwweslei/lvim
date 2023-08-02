@@ -12,6 +12,7 @@ lvim.plugins = {
   require 'plugins.better-escape',
   require 'plugins.neotest',
   require 'plugins.formatter',
+  require 'plugins.troble',
   "ChristianChiarulli/swenv.nvim",
   "rafamadriz/friendly-snippets",
   "stevearc/dressing.nvim",
