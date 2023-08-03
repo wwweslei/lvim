@@ -8,7 +8,6 @@ lvim.plugins = {
   require 'plugins.copilot-cmp',
   require 'plugins.eyeliner', -- ff jump
   require 'plugins.colorful-winsep',
-  require 'plugins.signature',
   require 'plugins.better-escape',
   require 'plugins.neotest',
   require 'plugins.formatter',
@@ -17,6 +16,7 @@ lvim.plugins = {
   require 'plugins.glow', -- server to inject LSP diagnostics
   require 'plugins.multline',
   require 'plugins.indent-blankline', -- This plugin adds indentation guides to all lines
+  require 'plugins.noice', -- This plugin adds indentation guides to all lines
   "ChristianChiarulli/swenv.nvim",
   "rafamadriz/friendly-snippets",
   "stevearc/dressing.nvim",

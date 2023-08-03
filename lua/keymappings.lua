@@ -1,3 +1,5 @@
+-- cmp <c-e> hilde box
+
 -- configure keymappings for LSP vim.keymap
 vim.g.mapleader = ' ' -- 'vim.g' sets global variables
 
