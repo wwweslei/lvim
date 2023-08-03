@@ -2,15 +2,6 @@
 vim.g.mapleader = ' ' -- 'vim.g' sets global variables
 
 
--- integratedTerminal
-lvim.builtin.which_key.mappings["t"] = {
-  name = "+Terminal",
-  f = { "<cmd>ToggleTerm<cr>", "Floating terminal" },
-  v = { "<cmd>2ToggleTerm size=30 direction=vertical<cr>", "Split vertical" },
-  h = { "<cmd>2ToggleTerm size=30 direction=horizontal<cr>", "Split horizontal" },
-}
-
-
 -- keymaps gT an gt move abas
 lvim.keys.normal_mode["gt"] = ":BufferLineCycleNext<CR>"
 lvim.keys.normal_mode["gT"] = ":BufferLineCyclePrev<CR>"
@@ -44,12 +35,6 @@ vim.keymap.set('n', '<leader>a', '<cmd>AerialToggle!<CR>')
 
 
 -- trouble
--- vim.keymap.set("n", "<leader>xx", function() require("trouble").open() end)
--- vim.keymap.set("n", "<leader>xw", function() require("trouble").open("workspace_diagnostics") end)
--- vim.keymap.set("n", "<leader>xd", function() require("trouble").open("document_diagnostics") end)
--- vim.keymap.set("n", "<leader>xq", function() require("trouble").open("quickfix") end)
--- vim.keymap.set("n", "<leader>xl", function() require("trouble").open("loclist") end)
--- vim.keymap.set("n", "gR", function() require("trouble").open("lsp_references") end)
 lvim.builtin.which_key.mappings["x"] = {
   name = "Diagnostics",
   t = { "<cmd>TroubleToggle<cr>", "trouble" },
@@ -58,4 +43,21 @@ lvim.builtin.which_key.mappings["x"] = {
   q = { "<cmd>TroubleToggle quickfix<cr>", "quickfix" },
   l = { "<cmd>TroubleToggle loclist<cr>", "loclist" },
   r = { "<cmd>TroubleToggle lsp_references<cr>", "references" },
+}
+
+-- tools
+lvim.builtin.which_key.mappings["z"] = {
+  name = "Tools",
+  m = { "<cmd>Glow<cr>", "Markdown Preview" }
+}
+
+-- windows 
+lvim.builtin.which_key.mappings["w"] = {
+  name = "Windows",
+  v = { "<cmd>vsplit<cr>", "Vertical Split" },
+  h = { "<cmd>split<cr>", "Horizontal Split" },
+  w = { "<cmd>wincmd w<cr>", "Next Window" },
+  q = { "<cmd>q<cr>", "Quit Window" },
+  o = { "<cmd>only<cr>", "Only Window" },
+
 }
