@@ -52,7 +52,7 @@ lvim.builtin.which_key.mappings["z"] = {
 }
 
 -- windows 
-lvim.builtin.which_key.mappings["w"] = {
+lvim.builtin.which_key.mappings["k"] = {
   name = "Windows",
   v = { "<cmd>vsplit<cr>", "Vertical Split" },
   h = { "<cmd>split<cr>", "Horizontal Split" },
