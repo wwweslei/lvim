@@ -1,5 +1,5 @@
 -- https://github.com/jinh0/eyeliner.nvim
-
+-- Move faster with unique f/F indicators for each word on the line.
 return {
   "jinh0/eyeliner.nvim",
   config = function()
