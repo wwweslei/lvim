@@ -17,6 +17,7 @@ lvim.plugins = {
   require 'plugins.multline',
   require 'plugins.indent-blankline', -- This plugin adds indentation guides to all lines
   require 'plugins.noice', -- This plugin adds indentation guides to all lines
+  require 'plugins.modicator', -- Cursor line number mode indicator.
   "ChristianChiarulli/swenv.nvim",
   "rafamadriz/friendly-snippets",
   "stevearc/dressing.nvim",
