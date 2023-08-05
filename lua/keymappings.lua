@@ -21,7 +21,7 @@ lvim.builtin.which_key.mappings["t"] = {
   S = { "<cmd>lua require('neotest').summary.toggle()<cr>", "Test Summary" },
 }
 
--- binding for 
+-- binding for
 lvim.builtin.which_key.mappings["j"] = {
   name = "Python",
   c = { "<cmd>lua require('swenv.api').pick_venv()<cr>", "Choose Env" },
@@ -53,8 +53,8 @@ lvim.builtin.which_key.mappings["z"] = {
   m = { "<cmd>Glow<cr>", "Markdown Preview" }
 }
 
--- windows 
-lvim.builtin.which_key.mappings["k"] = {
+-- windows
+lvim.builtin.which_key.mappings["W"] = {
   name = "Windows",
   v = { "<cmd>vsplit<cr>", "Vertical Split" },
   h = { "<cmd>split<cr>", "Horizontal Split" },
@@ -63,12 +63,11 @@ lvim.builtin.which_key.mappings["k"] = {
   o = { "<cmd>only<cr>", "Only Window" },
 }
 -- Add file_browser keymap
-lvim.builtin.which_key.mappings.s["f"] ={
+lvim.builtin.which_key.mappings.s["f"] = {
   "<cmd>:Telescope file_browser<cr>", "File_browser"
 }
 
 -- Add neogit keymap
-lvim.builtin.which_key.mappings.g["n"] ={
+lvim.builtin.which_key.mappings.g["n"] = {
   "<cmd>:Neogit<cr>", "Neogit"
 }
-
