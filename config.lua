@@ -17,7 +17,7 @@ lvim.plugins = {
   require 'plugins.multline',
   require 'plugins.indent-blankline', -- This plugin adds indentation guides to all lines
   require 'plugins.noice', -- This plugin adds indentation guides to all lines
-  require 'plugins.modicator', -- Cursor line number mode indicator.
+  require 'plugins.modes', -- Decorações de linhas prismáticas
   "ChristianChiarulli/swenv.nvim",
   "rafamadriz/friendly-snippets",
   "stevearc/dressing.nvim",
@@ -25,6 +25,7 @@ lvim.plugins = {
   "projekt0n/github-nvim-theme",
   'marko-cerovac/material.nvim',
   "sindrets/diffview.nvim",
+  { "NeogitOrg/neogit", dependencies = "nvim-lua/plenary.nvim", config = true },
 }
 
 require 'options'
