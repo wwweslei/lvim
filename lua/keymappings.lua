@@ -8,14 +8,11 @@ vim.g.mapleader = ' ' -- 'vim.g' sets global variables
 lvim.keys.normal_mode["gt"] = ":BufferLineCycleNext<CR>"
 lvim.keys.normal_mode["gT"] = ":BufferLineCyclePrev<CR>"
 
-
---keymap Jaq runeer
-vim.keymap.set('n', '<leader><esc>', ':Jaq quickfix<cr>', { noremap = true })
-vim.keymap.set('n', '<leader>n', ':Jaq float<cr>', { noremap = true })
-
+-- copy line corsor endline
+lvim.keys.normal_mode["Y"] = "y$"
 
 -- keymap for neotest
-lvim.builtin.which_key.mappings["d"] = {
+lvim.builtin.which_key.mappings["t"] = {
   name = "+Test",
   m = { "<cmd>lua require('neotest').run.run()<cr>", "Test Method" },
   M = { "<cmd>lua require('neotest').run.run({strategy = 'dap'})<cr>", "Test Method DAP" },
@@ -24,20 +21,22 @@ lvim.builtin.which_key.mappings["d"] = {
   S = { "<cmd>lua require('neotest').summary.toggle()<cr>", "Test Summary" },
 }
 
--- binding for switching
+-- binding for 
 lvim.builtin.which_key.mappings["j"] = {
   name = "Python",
   c = { "<cmd>lua require('swenv.api').pick_venv()<cr>", "Choose Env" },
-  j = { "<cmd>lua require('jaq-nvim').terminal<cr>", "Run" },
+  f = { "<cmd>:Jaq float<cr>", "Run" },
+  q = { "<cmd>:Jaq quickfix<cr>", "Run" },
+  t = { "<cmd>:Jaq terminal<cr>", "Run" },
+  b = { "<cmd>:Jaq bang<cr>", "Run" },
 }
-
 
 -- keymap to toggle aerial
 vim.keymap.set('n', '<leader>a', '<cmd>AerialToggle!<CR>')
 
 
 -- trouble
-lvim.builtin.which_key.mappings["x"] = {
+lvim.builtin.which_key.mappings["d"] = {
   name = "Diagnostics",
   t = { "<cmd>TroubleToggle<cr>", "trouble" },
   w = { "<cmd>TroubleToggle workspace_diagnostics<cr>", "workspace" },
@@ -45,6 +44,7 @@ lvim.builtin.which_key.mappings["x"] = {
   q = { "<cmd>TroubleToggle quickfix<cr>", "quickfix" },
   l = { "<cmd>TroubleToggle loclist<cr>", "loclist" },
   r = { "<cmd>TroubleToggle lsp_references<cr>", "references" },
+  a = { "<cmd>CodeActionMenu<cr>", "Code Actions" },
 }
 
 -- tools
@@ -61,5 +61,14 @@ lvim.builtin.which_key.mappings["k"] = {
   w = { "<cmd>wincmd w<cr>", "Next Window" },
   q = { "<cmd>q<cr>", "Quit Window" },
   o = { "<cmd>only<cr>", "Only Window" },
-
 }
+-- Add file_browser keymap
+lvim.builtin.which_key.mappings.s["f"] ={
+  "<cmd>:Telescope file_browser<cr>", "File_browser"
+}
+
+-- Add neogit keymap
+lvim.builtin.which_key.mappings.g["n"] ={
+  "<cmd>:Neogit<cr>", "Neogit"
+}
+
