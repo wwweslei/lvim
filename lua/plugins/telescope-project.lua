@@ -1,4 +1,5 @@
 -- https://github.com/nvim-telescope/telescope-project.nvim
+
 return {
   "nvim-telescope/telescope-project.nvim",
   event = "BufWinEnter",
