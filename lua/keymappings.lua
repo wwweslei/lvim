@@ -3,6 +3,8 @@
 -- configure keymappings for LSP vim.keymap
 vim.g.mapleader = ' ' -- 'vim.g' sets global variables
 
+-- Filename autocompletion
+lvim.keys.insert_mode["<C-f>"] = "<C-x><C-f>"
 
 -- keymaps gT an gt move abas
 lvim.keys.normal_mode["gt"] = ":BufferLineCycleNext<CR>"
@@ -25,10 +27,10 @@ lvim.builtin.which_key.mappings["t"] = {
 lvim.builtin.which_key.mappings["j"] = {
   name = "Python",
   c = { "<cmd>lua require('swenv.api').pick_venv()<cr>", "Choose Env" },
-  f = { "<cmd>:Jaq float<cr>", "Run" },
-  q = { "<cmd>:Jaq quickfix<cr>", "Run" },
-  t = { "<cmd>:Jaq terminal<cr>", "Run" },
-  b = { "<cmd>:Jaq bang<cr>", "Run" },
+  f = { "<cmd>:Jaq float<cr>", "Float" },
+  q = { "<cmd>:Jaq quickfix<cr>", "Quickfix" },
+  t = { "<cmd>:Jaq terminal<cr>", "Terminal" },
+  b = { "<cmd>:Jaq bang<cr>", "Bang" },
 }
 
 -- keymap to toggle aerial
@@ -50,7 +52,7 @@ lvim.builtin.which_key.mappings["d"] = {
 -- tools
 lvim.builtin.which_key.mappings["z"] = {
   name = "Tools",
-  m = { "<cmd>Glow<cr>", "Markdown Preview" }
+  m = { "<cmd>Glow<cr>", "Markdown Preview"},
 }
 
 -- windows
@@ -66,8 +68,18 @@ lvim.builtin.which_key.mappings["W"] = {
 lvim.builtin.which_key.mappings.s["f"] = {
   "<cmd>:Telescope file_browser<cr>", "File_browser"
 }
-
+-- Add file project
+lvim.builtin.which_key.mappings.s["P"] = {
+  "<cmd>:Telescope projects<cr>", "File_browser"
+}
 -- Add neogit keymap
 lvim.builtin.which_key.mappings.g["n"] = {
   "<cmd>:Neogit<cr>", "Neogit"
+}
+-- Add extra gitsigns keymap
+lvim.builtin.which_key.mappings["gS"] ={
+  "<cmd>:Gitsigns stage_buffer<cr>", "Stage buffer"
+}
+lvim.builtin.which_key.mappings["gR"] = {
+  "<cmd>:Gitsigns reset_buffer<cr>", "Reset buffer"
 }

@@ -30,7 +30,7 @@ lvim.plugins = {
   "projekt0n/github-nvim-theme",
   'marko-cerovac/material.nvim',
   "sindrets/diffview.nvim",
-  { "NeogitOrg/neogit", dependencies = "nvim-lua/plenary.nvim", config = true },
+  { "NeogitOrg/neogit", config = true },
 }
 
 require 'options'
