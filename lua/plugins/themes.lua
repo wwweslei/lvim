@@ -1,6 +1,8 @@
-
-
-return{
-    "projekt0n/github-nvim-theme",
-  'marko-cerovac/material.nvim', 
+-- https://github.com/catppuccin/nvim
+--
+return {
+  "catppuccin/nvim",
+  name = "catppuccin",
+  priority = 1000
 }
+

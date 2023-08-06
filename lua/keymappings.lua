@@ -27,10 +27,11 @@ lvim.builtin.which_key.mappings["t"] = {
 lvim.builtin.which_key.mappings["j"] = {
   name = "Python",
   c = { "<cmd>lua require('swenv.api').pick_venv()<cr>", "Choose Env" },
-  f = { "<cmd>:Jaq float<cr>", "Float" },
+  F = { "<cmd>:Jaq float<cr>", "Float" },
   q = { "<cmd>:Jaq quickfix<cr>", "Quickfix" },
   t = { "<cmd>:Jaq terminal<cr>", "Terminal" },
   b = { "<cmd>:Jaq bang<cr>", "Bang" },
+  f = { "<cmd>: black %<cr>", "Black format"}
 }
 
 -- keymap to toggle aerial

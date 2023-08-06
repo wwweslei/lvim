@@ -32,10 +32,10 @@ require('numb').setup {
 
 -- set theme
 --[github_dark, github, github_dark_dimmed, github_dark_high_contrast, github_dark_colorblind, github_dark_tritanopia]
-lvim.colorscheme = "github_dark_tritanopia"
-
-lvim.builtin.lualine.sections.lualine_a = { "mode", "python_env"}
-lvim.builtin.lualine.options.theme = "horizon"
+-- lvim.colorscheme = "github_dark_tritanopia"
+lvim.colorscheme = "catppuccin-mocha"
+lvim.builtin.lualine.sections.lualine_a = { "mode", "python_env" }
+lvim.builtin.lualine.options.theme = "catppuccin"
 
 -- emmet
 local emmet_options = {
@@ -87,4 +87,3 @@ lvim.builtin.telescope.defaults.layout_config = {
   preview_cutoff = 120,
   preview_width = 0.65,
 }
-

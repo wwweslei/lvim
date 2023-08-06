@@ -19,15 +19,15 @@ lvim.plugins = {
   require 'plugins.noice',            -- This plugin adds indentation guides to all lines
   require 'plugins.modes',            -- Decorações de linhas prismáticas
   require 'plugins.neogit',
-  require 'plugins.dressing',
   require 'plugins.nvim-code-action-menu',
   require 'plugins.telescope-extentions',
   require 'plugins.themes',
   require 'plugins.diffview',
   require 'plugins.dap-python', -- python debugger
   require 'plugins.swenv',      -- python virtualenv
-  require 'plugins.snippets'    -- friendly-snippets
+  "projekt0n/github-nvim-theme",
 }
 
 require 'options'
 require 'keymappings'
+require 'null-ls'
