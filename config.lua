@@ -25,7 +25,7 @@ lvim.plugins = {
   require 'plugins.diffview',
   require 'plugins.dap-python', -- python debugger
   require 'plugins.swenv',      -- python virtualenv
-  "projekt0n/github-nvim-theme",
+  require 'plugins.nvim-colorizer',
 }
 
 require 'options'

@@ -31,7 +31,7 @@ lvim.builtin.which_key.mappings["j"] = {
   q = { "<cmd>:Jaq quickfix<cr>", "Quickfix" },
   t = { "<cmd>:Jaq terminal<cr>", "Terminal" },
   b = { "<cmd>:Jaq bang<cr>", "Bang" },
-  f = { "<cmd>: black %<cr>", "Black format"}
+  f = { "<cmd>: black %<cr>", "Black format" }
 }
 
 -- keymap to toggle aerial
@@ -53,10 +53,13 @@ lvim.builtin.which_key.mappings["d"] = {
 -- tools
 lvim.builtin.which_key.mappings["z"] = {
   name = "Tools",
-  m = { "<cmd>Glow<cr>", "Markdown Preview"},
+  m = { "<cmd>Glow<cr>", "Markdown Preview" },
+  c = { "<cmd>lua require('colorizer').attach_to_buffer(0, { mode ='background', css = true})<cr>", "Colorizer" },
+  d = { "<cmd>ColorizerToggle<cr>", "toggle Colorizer" },
+  r = { "<cmd>ColorizerReloadAllBuffers<cr>", "Reload Colorizer" },
 }
 
--- windows
+-- windows 
 lvim.builtin.which_key.mappings["W"] = {
   name = "Windows",
   v = { "<cmd>vsplit<cr>", "Vertical Split" },
@@ -78,7 +81,7 @@ lvim.builtin.which_key.mappings.g["n"] = {
   "<cmd>:Neogit<cr>", "Neogit"
 }
 -- Add extra gitsigns keymap
-lvim.builtin.which_key.mappings["gS"] ={
+lvim.builtin.which_key.mappings["gS"] = {
   "<cmd>:Gitsigns stage_buffer<cr>", "Stage buffer"
 }
 lvim.builtin.which_key.mappings["gR"] = {

@@ -7,8 +7,8 @@ return {
       colors = {
         copy = "#f5c359",
         delete = "#c75c6a",
-        insert = "#25B2BC",
-        visual = "#9745be",
+        insert = "#ffffff",
+        visual = "#9119be",
       },
       -- Set opacity for cursorline and number background
       line_opacity = 0.15,

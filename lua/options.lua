@@ -17,6 +17,7 @@ lvim.format_on_save.enabled = true
 lvim.builtin.dap.active = true
 local mason_path = vim.fn.glob(vim.fn.stdpath "data" .. "/mason/")
 pcall(function()
+---@diagnostic disable-next-line: different-requires
   require("dap-python").setup(mason_path .. "packages/debugpy/venv/bin/python")
 end)
 
