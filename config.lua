@@ -28,6 +28,7 @@ lvim.plugins = {
   require 'plugins.nvim-colorizer',
   require 'plugins.boole', -- increase<c-a>/decrease number<c-x>
   require 'plugins.color-picker',
+  require 'plugins.telescope-media-files',
 }
 
 require 'options'

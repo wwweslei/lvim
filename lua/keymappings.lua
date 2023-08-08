@@ -39,7 +39,7 @@ vim.keymap.set('n', '<leader>a', '<cmd>AerialToggle!<CR>')
 
 
 -- trouble
-lvim.builtin.which_key.mappings["d"] = {
+lvim.builtin.which_key.mappings["d"]   = {
   name = "Diagnostics",
   t = { "<cmd>TroubleToggle<cr>", "trouble" },
   w = { "<cmd>TroubleToggle workspace_diagnostics<cr>", "workspace" },
@@ -51,7 +51,7 @@ lvim.builtin.which_key.mappings["d"] = {
 }
 
 -- tools
-lvim.builtin.which_key.mappings["z"] = {
+lvim.builtin.which_key.mappings["z"]   = {
   name = "Tools",
   m = { "<cmd>Glow<cr>", "Markdown Preview" },
   c = { "<cmd>lua require('colorizer').attach_to_buffer(0, { mode ='background', css = true})<cr>", "Colorizer" },
@@ -59,8 +59,8 @@ lvim.builtin.which_key.mappings["z"] = {
   r = { "<cmd>ColorizerReloadAllBuffers<cr>", "Reload Colorizer" },
   p = { "<cmd>PickColor<cr>", "Pick Color" },
 }
--- windows 
-lvim.builtin.which_key.mappings["W"] = {
+-- windows
+lvim.builtin.which_key.mappings["W"]   = {
   name = "Windows",
   v = { "<cmd>vsplit<cr>", "Vertical Split" },
   h = { "<cmd>split<cr>", "Horizontal Split" },
@@ -72,6 +72,10 @@ lvim.builtin.which_key.mappings["W"] = {
 lvim.builtin.which_key.mappings.s["f"] = {
   "<cmd>:Telescope file_browser<cr>", "File_browser"
 }
+-- Add media_files keymap
+lvim.builtin.which_key.mappings.s["m"] = {
+  "<cmd>:Telescope media_files<cr>", "Media_files"
+}
 -- Add file project
 lvim.builtin.which_key.mappings.s["P"] = {
   "<cmd>:Telescope projects<cr>", "File_browser"
@@ -81,6 +85,6 @@ lvim.builtin.which_key.mappings.g["n"] = {
   "<cmd>:Neogit<cr>", "Neogit"
 }
 -- Add extra gitsigns keymap
-lvim.builtin.which_key.mappings["gS"] = {
+lvim.builtin.which_key.mappings["gS"]  = {
   "<cmd>:Gitsigns stage_buffer<cr>", "Stage buffer"
 }
