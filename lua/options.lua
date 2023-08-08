@@ -78,6 +78,7 @@ lvim.builtin.telescope.theme = "ivy"
 lvim.builtin.telescope.on_config_done = function(telescope)
   pcall(telescope.load_extension, "file_browser")
   pcall(telescope.load_extension, "telescope-project")
+  pcall(telescope.load_extension, "noice")
   -- any other extensions loading
 end
 

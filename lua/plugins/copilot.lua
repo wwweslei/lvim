@@ -18,7 +18,7 @@ return {
           layout = {
             position = "right",  -- | top | left | right
             ratio = 0.4
-            
+
           },
         },
         suggestion = {
@@ -27,7 +27,7 @@ return {
           auto_trigger = true,
           debounce = 75,
           keymap = {
-            accept = "<Tab>",
+            accept = "<c-l>",
             accept_word = false,
             accept_line = false,
             next = "<M-]>",

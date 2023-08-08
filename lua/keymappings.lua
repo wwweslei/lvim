@@ -55,10 +55,10 @@ lvim.builtin.which_key.mappings["z"] = {
   name = "Tools",
   m = { "<cmd>Glow<cr>", "Markdown Preview" },
   c = { "<cmd>lua require('colorizer').attach_to_buffer(0, { mode ='background', css = true})<cr>", "Colorizer" },
-  d = { "<cmd>ColorizerToggle<cr>", "toggle Colorizer" },
+  C = { "<cmd>ColorizerToggle<cr>", "toggle Colorizer" },
   r = { "<cmd>ColorizerReloadAllBuffers<cr>", "Reload Colorizer" },
+  p = { "<cmd>PickColor<cr>", "Pick Color" },
 }
-
 -- windows 
 lvim.builtin.which_key.mappings["W"] = {
   name = "Windows",
@@ -83,7 +83,4 @@ lvim.builtin.which_key.mappings.g["n"] = {
 -- Add extra gitsigns keymap
 lvim.builtin.which_key.mappings["gS"] = {
   "<cmd>:Gitsigns stage_buffer<cr>", "Stage buffer"
-}
-lvim.builtin.which_key.mappings["gR"] = {
-  "<cmd>:Gitsigns reset_buffer<cr>", "Reset buffer"
 }

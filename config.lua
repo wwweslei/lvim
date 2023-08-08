@@ -26,6 +26,8 @@ lvim.plugins = {
   require 'plugins.dap-python', -- python debugger
   require 'plugins.swenv',      -- python virtualenv
   require 'plugins.nvim-colorizer',
+  require 'plugins.boole', -- increase<c-a>/decrease number<c-x>
+  require 'plugins.color-picker',
 }
 
 require 'options'

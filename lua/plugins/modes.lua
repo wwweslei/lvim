@@ -5,9 +5,9 @@ return {
   config = function()
     require('modes').setup({
       colors = {
-        copy = "#f5c359",
+        copy   = "#f5c359",
         delete = "#c75c6a",
-        insert = "#ffffff",
+        insert = "#f5c359",
         visual = "#9119be",
       },
       -- Set opacity for cursorline and number background
@@ -21,7 +21,7 @@ return {
       set_cursorline = true,
 
       -- Enable line number highlights to match cursorline
-      set_number = false,
+      set_number = true,
 
       -- Disable modes highlights in specified filetypes
       -- Please PR commonly ignored filetypes
