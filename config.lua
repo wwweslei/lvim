@@ -29,6 +29,7 @@ lvim.plugins = {
   require 'plugins.boole', -- increase<c-a>/decrease number<c-x>
   require 'plugins.color-picker',
   require 'plugins.telescope-media-files',
+  require 'plugins.zen-mode',
 }
 
 require 'options'
