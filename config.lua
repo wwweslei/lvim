@@ -8,14 +8,14 @@ lvim.plugins = {
   require 'plugins.copilot-cmp',
   require 'plugins.eyeliner',        -- ff jump
   require 'plugins.colorful-winsep', -- decora as janelas
-  require 'plugins.better-escape',
+  require 'plugins.better-escape',   -- j j <esc>  
   require 'plugins.neotest',
   require 'plugins.formatter',
   require 'plugins.troble',           --ferramenta de diagnosticos
   require 'plugins.nump',             -- jump to the line
   require 'plugins.glow',             -- server to inject LSP diagnostics
   require 'plugins.multline',
-  require 'plugins.indent-blankline', -- This plugin adds indentation guides to all lines
+  require 'plugins.hlchunk', -- This plugin adds indentation guides to all lines
   require 'plugins.noice',            -- This plugin adds indentation guides to all lines
   require 'plugins.modes',            -- Decorações de linhas prismáticas
   require 'plugins.neogit',
@@ -30,6 +30,7 @@ lvim.plugins = {
   require 'plugins.color-picker',
   require 'plugins.telescope-media-files',
   require 'plugins.zen-mode',
+'twanh/nvim-pydoc'
 }
 
 require 'options'

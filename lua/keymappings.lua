@@ -10,9 +10,6 @@ lvim.keys.insert_mode["<C-f>"] = "<C-x><C-f>"
 lvim.keys.normal_mode["gt"] = ":BufferLineCycleNext<CR>"
 lvim.keys.normal_mode["gT"] = ":BufferLineCyclePrev<CR>"
 
--- copy line corsor endline
-lvim.keys.normal_mode["Y"] = "y$"
-
 -- keymap for neotest
 lvim.builtin.which_key.mappings["t"] = {
   name = "+Test",
