@@ -33,8 +33,10 @@ lvim.builtin.which_key.mappings["j"] = {
 
 -- keymap to toggle aerial
 vim.keymap.set('n', '<leader>a', '<cmd>AerialToggle!<CR>')
-
-
+-- keymap to only Window
+vim.keymap.set('n', '<leader>o', '<cmd>only<CR>')
+-- keymap to registers
+vim.keymap.set('n', '<leader>r', '<cmd>Registers<CR>')
 -- trouble
 lvim.builtin.which_key.mappings["d"]   = {
   name = "Diagnostics",
