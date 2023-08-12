@@ -30,7 +30,7 @@ lvim.plugins = {
   require 'plugins.color-picker',
   require 'plugins.telescope-media-files',
   require 'plugins.zen-mode',
-'twanh/nvim-pydoc'
+  require 'plugins.pydoc',
 }
 
 require 'options'
