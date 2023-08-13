@@ -32,9 +32,10 @@ lvim.plugins = {
   require 'plugins.zen-mode',
   require 'plugins.pydoc',
   require 'plugins.registers',
+  require 'plugins.marks',
+  'gennaro-tedesco/nvim-peekup'
 }
 
 require 'options'
 require 'keymappings'
 require 'null-ls'
-

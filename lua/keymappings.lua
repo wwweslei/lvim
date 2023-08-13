@@ -52,11 +52,13 @@ lvim.builtin.which_key.mappings["d"]   = {
 -- tools
 lvim.builtin.which_key.mappings["z"]   = {
   name = "Tools",
-  m = { "<cmd>Glow<cr>", "Markdown Preview" },
+  M = { "<cmd>Glow<cr>", "Markdown Preview" },
   c = { "<cmd>lua require('colorizer').attach_to_buffer(0, { mode ='background', css = true})<cr>", "Colorizer" },
   C = { "<cmd>ColorizerToggle<cr>", "toggle Colorizer" },
   r = { "<cmd>ColorizerReloadAllBuffers<cr>", "Reload Colorizer" },
   p = { "<cmd>PickColor<cr>", "Pick Color" },
+  m = { "<cmd>MarksList<cr>", "Marks List" },
+  g = { "<cmd>MarksQFListGlobal<cr>", "Marks Global" },
 }
 -- windows
 lvim.builtin.which_key.mappings["W"]   = {

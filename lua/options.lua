@@ -79,6 +79,7 @@ lvim.builtin.telescope.on_config_done = function(telescope)
   pcall(telescope.load_extension, "file_browser")
   pcall(telescope.load_extension, "telescope-project")
   pcall(telescope.load_extension, "noice")
+  pcall(telescope.load_extension, "neoclip")
   -- any other extensions loading
 end
 
