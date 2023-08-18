@@ -79,7 +79,6 @@ lvim.builtin.telescope.on_config_done = function(telescope)
   pcall(telescope.load_extension, "file_browser")
   pcall(telescope.load_extension, "telescope-project")
   pcall(telescope.load_extension, "noice")
-  pcall(telescope.load_extension, "neoclip")
   -- any other extensions loading
 end
 
@@ -90,3 +89,22 @@ lvim.builtin.telescope.defaults.layout_config = {
   preview_cutoff = 120,
   preview_width = 0.65,
 }
+lvim.builtin.which_key.setup.plugins = {
+  marks = true,
+  registers = true,
+  spelling = {
+    enabled = true,
+    suggestions = 20,
+  },
+  presets = {
+    operators = true,
+    motions = true,
+    text_objects = true,
+    windows = true,
+    nav = true,
+    z = true,
+    g = true,
+  },
+}
+-- autocmd VimEnter,VimLeave * silent !tmux set status
+vim.cmd("autocmd VimEnter,VimLeave * silent !tmux set status off")

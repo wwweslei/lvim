@@ -58,7 +58,7 @@ return {
           position = "bot",
 
           -- Window size
-          size     = 10,
+          size     = 30,
 
           -- Disable line numbers
           line_no  = false

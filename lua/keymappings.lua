@@ -35,8 +35,6 @@ lvim.builtin.which_key.mappings["j"] = {
 vim.keymap.set('n', '<leader>a', '<cmd>AerialToggle!<CR>')
 -- keymap to only Window
 vim.keymap.set('n', '<leader>o', '<cmd>only<CR>')
--- keymap to registers
-vim.keymap.set('n', '<leader>r', '<cmd>Registers<CR>')
 -- trouble
 lvim.builtin.which_key.mappings["d"]   = {
   name = "Diagnostics",
@@ -57,24 +55,37 @@ lvim.builtin.which_key.mappings["z"]   = {
   C = { "<cmd>ColorizerToggle<cr>", "toggle Colorizer" },
   r = { "<cmd>ColorizerReloadAllBuffers<cr>", "Reload Colorizer" },
   p = { "<cmd>PickColor<cr>", "Pick Color" },
-  m = { "<cmd>MarksList<cr>", "Marks List" },
-  g = { "<cmd>MarksQFListGlobal<cr>", "Marks Global" },
 }
 -- windows
-lvim.builtin.which_key.mappings["W"]   = {
+lvim.builtin.which_key.mappings["i"]   = {
   name = "Windows",
   v = { "<cmd>vsplit<cr>", "Vertical Split" },
   h = { "<cmd>split<cr>", "Horizontal Split" },
   w = { "<cmd>wincmd w<cr>", "Next Window" },
   q = { "<cmd>q<cr>", "Quit Window" },
   o = { "<cmd>only<cr>", "Only Window" },
+  j = { "<cmd>horizontal resize -12<cr>", "Decrease Window" },
+  k = { "<cmd>horizontal resize +12<cr>", "Increase Window" },
+  z = { "<cmd> :ZenMode<cr>", "Zen Mode" },
+}
+-- Add marks keymap
+lvim.builtin.which_key.mappings.b["m"] = {
+  "<cmd>MarksListBuf<cr>", "Marks List"
+}
+-- Add marks keymap
+lvim.builtin.which_key.mappings.b["M"] = {
+ "<cmd>MarksQFListGlobal<cr>", "Marks Global"
 }
 -- Add file_browser keymap
-lvim.builtin.which_key.mappings.s["f"] = {
+lvim.builtin.which_key.mappings.s["F"] = {
   "<cmd>:Telescope file_browser<cr>", "File_browser"
 }
--- Add media_files keymap
+-- Add marks keymap
 lvim.builtin.which_key.mappings.s["m"] = {
+  "<cmd>:Telescope marks<cr>", "Marks"
+}
+-- Add media_files keymap
+lvim.builtin.which_key.mappings.s["f"] = {
   "<cmd>:Telescope media_files<cr>", "Media_files"
 }
 -- Add file project
@@ -89,3 +100,4 @@ lvim.builtin.which_key.mappings.g["n"] = {
 lvim.builtin.which_key.mappings["gS"]  = {
   "<cmd>:Gitsigns stage_buffer<cr>", "Stage buffer"
 }
+

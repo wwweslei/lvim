@@ -31,9 +31,7 @@ lvim.plugins = {
   require 'plugins.telescope-media-files',
   require 'plugins.zen-mode',
   require 'plugins.pydoc',
-  require 'plugins.registers',
   require 'plugins.marks',
-  'gennaro-tedesco/nvim-peekup'
 }
 
 require 'options'
