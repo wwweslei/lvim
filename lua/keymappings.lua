@@ -66,7 +66,8 @@ lvim.builtin.which_key.mappings["i"]   = {
   o = { "<cmd>only<cr>", "Only Window" },
   j = { "<cmd>horizontal resize -12<cr>", "Decrease Window" },
   k = { "<cmd>horizontal resize +12<cr>", "Increase Window" },
-  z = { "<cmd> :ZenMode<cr>", "Zen Mode" },
+  z = { "<cmd>ZenMode<cr>", "Zen Mode" },
+  t = { "<cmd>Twilight<cr>", "Twilight" },
 }
 -- Add marks keymap
 lvim.builtin.which_key.mappings.b["m"] = {

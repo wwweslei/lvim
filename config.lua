@@ -32,6 +32,7 @@ lvim.plugins = {
   require 'plugins.zen-mode',
   require 'plugins.pydoc',
   require 'plugins.marks',
+  require 'plugins.twilight',
 }
 
 require 'options'

@@ -30,7 +30,7 @@ return {
         options = {
           enabled = true,
           ruler = false,              -- disables the ruler text in the cmd line area
-          showcmd = false,            -- disables the command in the last line of the screen
+          showcmd = true,            -- disables the command in the last line of the screen
         },
         twilight = { enabled = true }, -- enable to start Twilight when zen mode opens
         gitsigns = { enabled = true }, -- disables git signs
@@ -40,8 +40,8 @@ return {
         -- - allow_remote_control socket-only
         -- - listen_on unix:/tmp/kitty
         kitty = {
-          enabled = false,
-          font = "+4", -- font size increment
+          enabled = true,
+          font = "+2", -- font size increment
         },
         -- this will change the font size on alacritty when in zen mode
         -- requires  Alacritty Version 0.10.0 or higher
