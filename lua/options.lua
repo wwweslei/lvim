@@ -5,8 +5,8 @@ lvim.builtin.treesitter.ensure_installed = {
 
 -- setup formatting
 local formatters = require "lvim.lsp.null-ls.formatters"
-formatters.setup { { name = "black" }, }
-lvim.format_on_save.pattern = { "*.py" }
+formatters.setup { { name = "black" }, { name = "prettier", filetypes = { "typescript", "typescriptreact", "html" }, } }
+lvim.format_on_save.pattern = { "*.py", "*.lua" }
 lvim.format_on_save.enabled = true
 
 -- setup linting
@@ -17,7 +17,7 @@ lvim.format_on_save.enabled = true
 lvim.builtin.dap.active = true
 local mason_path = vim.fn.glob(vim.fn.stdpath "data" .. "/mason/")
 pcall(function()
----@diagnostic disable-next-line: different-requires
+  ---@diagnostic disable-next-line: different-requires
   require("dap-python").setup(mason_path .. "packages/debugpy/venv/bin/python")
 end)
 
@@ -106,5 +106,7 @@ lvim.builtin.which_key.setup.plugins = {
     g = true,
   },
 }
--- autocmd VimEnter,VimLeave * silent !tmux set status
-vim.cmd("autocmd VimEnter,VimLeave * silent !tmux set status off")
+-- autocmd VimEnter silent !tmux set status
+vim.cmd("autocmd VimEnter * silent !tmux set status off")
+-- autocmd VimLeave start !tmux set status
+vim.cmd("autocmd VimLeave * silent !tmux set status on")
