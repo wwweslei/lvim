@@ -18,6 +18,15 @@ lvim.builtin.which_key.mappings["t"] = {
   f = { "<cmd>lua require('neotest').run.run({vim.fn.expand('%')})<cr>", "Test Class" },
   F = { "<cmd>lua require('neotest').run.run({vim.fn.expand('%'), strategy = 'dap'})<cr>", "Test Class DAP" },
   S = { "<cmd>lua require('neotest').summary.toggle()<cr>", "Test Summary" },
+  s = { "<cmd>lua require('neotest').run.stop()<cr>", "Test Stop" },
+  b = { "<cmd>lua require('dap').toggle_breakpoint()<cr>", "Test Toggle Breakpoint" },
+  c = { "<cmd>lua require('dap').continue()<cr>", "Test Continue" },
+  C = { "<cmd>lua require('dapui').close()<cr>", "Test Close UI" },
+  T = { "<cmd>lua require('dapui').toggle()<cr>", "Test Toggle UI" },
+  n = { "<cmd>lua require('dap').step_over()<cr>", "Test Step Over" },
+  i = { "<cmd>lua require('dap').step_into()<cr>", "Test Step Into" },
+  o = { "<cmd>lua require('dap').step_out()<cr>", "Test Step Out" },
+  r = { "<cmd>lua require('dap').repl.toggle()<cr>", "Test REPL" },
 }
 
 -- binding for
@@ -35,6 +44,8 @@ lvim.builtin.which_key.mappings["j"] = {
 vim.keymap.set('n', '<leader>a', '<cmd>AerialToggle!<CR>')
 -- keymap to only Window
 vim.keymap.set('n', '<leader>o', '<cmd>only<CR>')
+-- keymap to Neoformat
+vim.keymap.set('n', '<leader>F', '<cmd>Neoformat<CR>')
 -- trouble
 lvim.builtin.which_key.mappings["d"]   = {
   name = "Diagnostics",
@@ -75,7 +86,7 @@ lvim.builtin.which_key.mappings.b["m"] = {
 }
 -- Add marks keymap
 lvim.builtin.which_key.mappings.b["M"] = {
- "<cmd>MarksQFListGlobal<cr>", "Marks Global"
+  "<cmd>MarksQFListGlobal<cr>", "Marks Global"
 }
 -- Add file_browser keymap
 lvim.builtin.which_key.mappings.s["F"] = {
@@ -101,4 +112,3 @@ lvim.builtin.which_key.mappings.g["n"] = {
 lvim.builtin.which_key.mappings["gS"]  = {
   "<cmd>:Gitsigns stage_buffer<cr>", "Stage buffer"
 }
-

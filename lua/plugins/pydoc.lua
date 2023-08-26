@@ -1,5 +1,4 @@
--- https://github.com/gennaro-tedesco/nvim-peekup
-
+-- https://github.com/twanh/nvim-pydoc
 return {
 
   'twanh/nvim-pydoc'

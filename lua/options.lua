@@ -1,17 +1,34 @@
 -- automatically install python syntax highlighting
 lvim.builtin.treesitter.ensure_installed = {
   "python",
+  "bash",
+  "lua",
+  "javascript",
+  "html",
+  "css",
+  "json",
+  "yaml",
+  "toml",
+  "dockerfile",
+  "scss",
 }
-
 -- setup formatting
 local formatters = require "lvim.lsp.null-ls.formatters"
-formatters.setup { { name = "black" }, { name = "prettier", filetypes = { "typescript", "typescriptreact", "html" }, } }
-lvim.format_on_save.pattern = { "*.py", "*.lua" }
+formatters.setup {
+  { command = "black",    filetypes = { "python" } },
+  { command = "isort",    filetypes = { "python" } },
+  { command = "prettier", filetypes = { "javascript", "typescript", "json", "html", "css", "scss", "markdown", "toml" } },
+  { command = "djLint",   filetypes = { "htmldjango" } },
+}
+lvim.format_on_save.pattern = { "*.py", "*.lua", "*.js", "*.ts", "*.html" }
 lvim.format_on_save.enabled = true
 
 -- setup linting
--- local linters = require "lvim.lsp.null-ls.linters"
--- linters.setup { { command = "flake8", filetypes = { "python" } } }
+local linters = require "lvim.lsp.null-ls.linters"
+linters.setup {
+  -- { command = "mypy",   filetypes = { "python" } },
+  { command = "djLint", filetypes = { "html" } },
+}
 
 -- setup debug adapter
 lvim.builtin.dap.active = true
@@ -79,6 +96,7 @@ lvim.builtin.telescope.on_config_done = function(telescope)
   pcall(telescope.load_extension, "file_browser")
   pcall(telescope.load_extension, "telescope-project")
   pcall(telescope.load_extension, "noice")
+  pcall(telescope.load_extension, "dap")
   -- any other extensions loading
 end
 
