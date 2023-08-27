@@ -1,0 +1,11 @@
+{
+    "diagnostics.globals": [
+        "vim",
+        "lvim",
+        "reload",
+        "colorizer"
+    ],
+    "diagnostics.disable": [
+        "different-requires"
+    ]
+}
