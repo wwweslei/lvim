@@ -39,6 +39,11 @@ lvim.builtin.which_key.mappings["j"] = {
   b = { "<cmd>:Jaq bang<cr>", "Bang" },
   f = { "<cmd>: black %<cr>", "Black format" }
 }
+-- yanky keymap
+vim.keymap.set({ "n", "x" }, "p", "<Plug>(YankyPutAfter)")
+vim.keymap.set({ "n", "x" }, "P", "<Plug>(YankyPutBefore)")
+vim.keymap.set({ "n", "x" }, "gp", "<Plug>(YankyCycleForward)")
+vim.keymap.set({ "n", "x" }, "gP", "<Plug>(YankyCycleBackward)")
 
 -- keymap to toggle aerial
 vim.keymap.set('n', '<leader>a', '<cmd>AerialToggle!<CR>')
@@ -66,6 +71,8 @@ lvim.builtin.which_key.mappings["z"]   = {
   C = { "<cmd>ColorizerToggle<cr>", "toggle Colorizer" },
   r = { "<cmd>ColorizerReloadAllBuffers<cr>", "Reload Colorizer" },
   p = { "<cmd>PickColor<cr>", "Pick Color" },
+  S = { "<cmd>StartupTime<cr>", "Startuptime" },
+  s = { "<cmd>lua require('spectre').toggle()<cr>", "Spectre" },
 }
 -- windows
 lvim.builtin.which_key.mappings["i"]   = {
@@ -79,6 +86,7 @@ lvim.builtin.which_key.mappings["i"]   = {
   k = { "<cmd>horizontal resize +12<cr>", "Increase Window" },
   z = { "<cmd>ZenMode<cr>", "Zen Mode" },
   t = { "<cmd>Twilight<cr>", "Twilight" },
+  s = { "<cmd>SymbolsOutline<cr>", "Symbols Outline" },
 }
 -- Add marks keymap
 lvim.builtin.which_key.mappings.b["m"] = {
@@ -92,6 +100,10 @@ lvim.builtin.which_key.mappings.b["M"] = {
 lvim.builtin.which_key.mappings.s["F"] = {
   "<cmd>:Telescope file_browser<cr>", "File_browser"
 }
+-- add frecency keymap
+lvim.builtin.which_key.mappings.s["R"] = {
+  "<cmd>:Telescope frecency<cr>", "Frecency"
+}
 -- Add marks keymap
 lvim.builtin.which_key.mappings.s["m"] = {
   "<cmd>:Telescope marks<cr>", "Marks"
@@ -103,6 +115,9 @@ lvim.builtin.which_key.mappings.s["f"] = {
 -- Add file project
 lvim.builtin.which_key.mappings.s["P"] = {
   "<cmd>:Telescope projects<cr>", "File_browser"
+}
+lvim.builtin.which_key.mappings.s["y"] = {
+  "<cmd>:Telescope yank_history<cr>", "Yank_history"
 }
 -- Add neogit keymap
 lvim.builtin.which_key.mappings.g["n"] = {

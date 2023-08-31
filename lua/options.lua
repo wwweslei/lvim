@@ -26,7 +26,13 @@ lvim.format_on_save.enabled = true
 -- setup linting
 local linters = require "lvim.lsp.null-ls.linters"
 linters.setup {
-  { command = "djLint", filetypes = { "html" } },
+  { command = "ruff",         filetypes = { "python" } },
+  { command = "eslint",       filetypes = { "javascript", "typescript" } },
+  { command = "stylelint",    filetypes = { "css", "scss" } },
+  { command = "markdownlint", filetypes = { "markdown" } },
+  { command = "djLint",       filetypes = { "html" } },
+  { command = "djLint",       filetypes = { "htmldjango" } },
+
 }
 
 -- setup debug adapter
@@ -95,6 +101,8 @@ lvim.builtin.telescope.on_config_done = function(telescope)
   pcall(telescope.load_extension, "file_browser")
   pcall(telescope.load_extension, "telescope-project")
   pcall(telescope.load_extension, "noice")
+  pcall(telescope.load_extension, "frecency")
+  pcall(telescope.load_extension, "yank_history")
   -- any other extensions loading
 end
 
