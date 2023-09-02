@@ -3,7 +3,9 @@
         "vim",
         "lvim",
         "reload",
-        "colorizer"
+        "colorizer",
+        "send",
+        "send_input"
     ],
     "diagnostics.disable": [
         "different-requires"

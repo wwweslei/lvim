@@ -18,7 +18,8 @@ formatters.setup {
   { command = "black",    filetypes = { "python" } },
   { command = "isort",    filetypes = { "python" } },
   { command = "prettier", filetypes = { "javascript", "typescript", "json", "html", "css", "scss", "markdown" } },
-  { command = "taplo",    filetypes = { "toml" } }
+  { command = "taplo",    filetypes = { "toml" } },
+  -- { command = "djLint",   filetypes = { "htmldjango" } },
 }
 lvim.format_on_save.pattern = { "*.py", "*.lua", "*.js", "*.ts", "*.html" }
 lvim.format_on_save.enabled = true
@@ -26,12 +27,12 @@ lvim.format_on_save.enabled = true
 -- setup linting
 local linters = require "lvim.lsp.null-ls.linters"
 linters.setup {
-  { command = "ruff",         filetypes = { "python" } },
-  { command = "eslint",       filetypes = { "javascript", "typescript" } },
-  { command = "stylelint",    filetypes = { "css", "scss" } },
-  { command = "markdownlint", filetypes = { "markdown" } },
-  { command = "djLint",       filetypes = { "html" } },
-  { command = "djLint",       filetypes = { "htmldjango" } },
+  { command = "ruff",      filetypes = { "python" } },
+  { command = "eslint",    filetypes = { "javascript", "typescript" } },
+  { command = "stylelint", filetypes = { "css", "scss" } },
+  -- { command = "markdownlint", filetypes = { "markdown" } },
+  -- { command = "djLint",    filetypes = { "html" } },
+  -- { command = "djLint",    filetypes = { "htmldjango" } },
 
 }
 

@@ -26,19 +26,21 @@ lvim.plugins = {
   require 'plugins.color-picker',          -- color picker
   require 'plugins.telescope-extentions',  -- telescope extentions
   require 'plugins.nvim-code-action-menu', -- code action menu
-  require 'plugins.telescope-media-files',
-  require 'plugins.zen-mode',
-  require 'plugins.pydoc', -- python doc
-  require 'plugins.marks',
-  require 'plugins.twilight',
-  require 'plugins.dap-python',
-  require 'plugins.vim-bookmarks',
-  require 'plugins.neoformat',
-  require 'plugins.mini-animation',
-  require 'plugins.symbols_outline',
-  require 'plugins.sqlite',
-  require 'plugins.spectre',
-  require 'plugins.surround',
+  require 'plugins.telescope-media-files', -- telescope media files
+  require 'plugins.zen-mode',              -- zen mode
+  require 'plugins.pydoc',                 -- python doc
+  require 'plugins.marks',                 -- marks
+  require 'plugins.twilight',              -- twilight desfoca o resto do texto
+  require 'plugins.dap-python',            -- debug python
+  require 'plugins.neoformat',             -- formatador
+  require 'plugins.mini-animation',        -- animação
+  require 'plugins.symbols_outline',       -- symbols outline
+  require 'plugins.sqlite',                -- sqlite
+  require 'plugins.spectre',               -- search and replace
+  require 'plugins.surround',              -- surround text
+  require 'plugins.todo-comments',         -- todo comments
+  require 'plugins.iron',                  -- repl
 }
-require 'options'
-require 'keymappings'
+require 'options'                          -- options
+require 'keymappings'                      -- keymappings
+require 'options'                          -- options
