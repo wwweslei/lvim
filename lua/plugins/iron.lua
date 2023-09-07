@@ -13,7 +13,10 @@ return {
             -- Can be a table or a function that
             -- returns a table (see below)
             command = { "zsh" }
-          }
+          },
+          python = {
+            command = { "ptpython" }
+          },
         },
         -- How the repl window will be displayed
         -- See below for more information

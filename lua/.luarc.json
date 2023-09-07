@@ -1,12 +1,4 @@
 {
-    "diagnostics.globals": [
-        "vim",
-        "lvim",
-        "reload",
-        "colorizer",
-        "send",
-        "send_input"
-    ],
     "diagnostics.disable": [
         "different-requires"
     ]

@@ -13,9 +13,9 @@ lvim.plugins = {
   require 'plugins.troble',                -- ferramenta de diagnosticos
   require 'plugins.nump',                  -- jump to the line
   require 'plugins.glow',                  -- render markdown
+  require 'plugins.noice',                 -- This plugin adds indentation guides to all lines
   require 'plugins.multline',              -- multi line edit
   require 'plugins.hlchunk',               -- This plugin adds indentation guides to all lines
-  require 'plugins.noice',                 -- This plugin adds indentation guides to all lines
   require 'plugins.modes',                 -- Decorações de linhas prismáticas
   require 'plugins.neogit',                -- git ui
   require 'plugins.boole',                 -- increase<c-a>/decrease number<c-x>
@@ -40,7 +40,11 @@ lvim.plugins = {
   require 'plugins.surround',              -- surround text
   require 'plugins.todo-comments',         -- todo comments
   require 'plugins.iron',                  -- repl
+  require 'plugins.translate',             -- translate
+  require 'plugins.tmux',                  -- tmux
+  require 'plugins.tools',                 -- tools
+  require 'plugins.neoscroll',             -- smooth scroll
 }
-require 'options'                          -- options
-require 'keymappings'                      -- keymappings
-require 'options'                          -- options
+
+require 'options'     -- options
+require 'keymappings' -- keymappings

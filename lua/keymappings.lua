@@ -91,7 +91,7 @@ vim.keymap.set("n", "gS", function()
   vim.cmd("IronSend" .. " " .. var)
 end)
 
-lvim.builtin.which_key.mappings["r"] = {
+lvim.builtin.which_key.mappings["i"] = {
   name = "Iron repl",
   a = { "<cmd>IronAttach<cr>", "Attach" },
   h = { "<cmd>IronHide<cr>", "Hide" },
@@ -102,7 +102,12 @@ lvim.builtin.which_key.mappings["r"] = {
   f = { "<cmd>lua require('iron.core').send_file()<cr>", "Send File" },
   v = { "<cmd>lua require('iron.core').visual_send()<cr>", "Visual Send" },
 }
-
+lvim.builtin.which_key.mappings["r"] = {
+  name = "Replace",
+  r = { "<cmd>lua require('spectre').open()<cr>", "Replace" },
+  w = { "<cmd>lua require('spectre').open_visual({select_word=true})<cr>", "Replace Word" },
+  f = { "<cmd>lua require('spectre').open_file_search()<cr>", "Replace Buffer" },
+}
 -- keymap for neotest
 lvim.builtin.which_key.mappings["t"] = {
   name = "+Test",
@@ -132,4 +137,5 @@ lvim.builtin.which_key.mappings["z"] = {
   p = { "<cmd>PickColor<cr>", "Pick Color" },
   S = { "<cmd>StartupTime<cr>", "Startuptime" },
   s = { "<cmd>lua require('spectre').toggle()<cr>", "Spectre" },
+  t = { "<cmd>Pantran<cr>", "Translate" },
 }

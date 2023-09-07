@@ -1,4 +1,5 @@
 -- automatically install python syntax highlighting
+--
 lvim.builtin.treesitter.ensure_installed = {
   "python",
   "bash",
@@ -7,6 +8,7 @@ lvim.builtin.treesitter.ensure_installed = {
   "html",
   "css",
   "json",
+  "java",
   "yaml",
   "toml",
   "dockerfile",
@@ -35,6 +37,8 @@ linters.setup {
   -- { command = "djLint",    filetypes = { "htmldjango" } },
 
 }
+-- treesitter
+-- lvim.builtin.treesitter.matchup.enable = true
 
 -- setup debug adapter
 lvim.builtin.dap.active = true
@@ -67,7 +71,6 @@ local emmet_options = {
     "html",
     "typescript",
     "javascript",
-    "javascriptreact",
     "xml",
   },
   root_dir = function()
@@ -75,6 +78,7 @@ local emmet_options = {
   end
 }
 
+-- html
 require("lvim.lsp.manager").setup("emmet_ls", emmet_options)
 
 -- LSP bashls
