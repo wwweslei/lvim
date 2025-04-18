@@ -50,7 +50,7 @@ lvim.builtin.which_key.mappings["d"]   = {
 }
 
 -- windows
-lvim.builtin.which_key.mappings["i"]   = {
+lvim.builtin.which_key.mappings["W"]   = {
   name = "Windows",
   a = { "<cmd>AerialToggle!<CR> ", "Aerial" },
   v = { "<cmd>vsplit<cr>", "Vertical Split" },
@@ -133,6 +133,7 @@ lvim.builtin.which_key.mappings["z"] = {
   M = { "<cmd>Glow<cr>", "Markdown Preview" },
   c = { "<cmd>lua require('colorizer').attach_to_buffer(0, { mode ='background', css = true})<cr>", "Colorizer" },
   C = { "<cmd>ColorizerToggle<cr>", "toggle Colorizer" },
+  l = { "<cmd>LiveServerStart<cr>", "Live Server" },
   r = { "<cmd>ColorizerReloadAllBuffers<cr>", "Reload Colorizer" },
   p = { "<cmd>PickColor<cr>", "Pick Color" },
   S = { "<cmd>StartupTime<cr>", "Startuptime" },

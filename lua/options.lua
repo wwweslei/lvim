@@ -85,20 +85,21 @@ require("lvim.lsp.manager").setup("emmet_ls", emmet_options)
 require 'lspconfig'.bashls.setup {}
 
 -- setup testing
-require("neotest").setup({
-  adapters = {
-    require("neotest-python")({
-      -- Extra arguments for nvim-dap configuration
-      -- See https://github.com/microsoft/debugpy/wiki/Debug-configuration-settings for values
-      dap = {
-        justMyCode = false,
-        console = "integratedTerminal",
-      },
-      args = { "--log-level", "DEBUG", "--quiet" },
-      runner = "pytest",
-    })
-  }
-})
+--     { "nvim-neotest/nvim-nio" }
+-- require("neotest").setup({
+--   adapters = {
+--     require("neotest-python")({
+--       -- Extra arguments for nvim-dap configuration
+--       -- See https://github.com/microsoft/debugpy/wiki/Debug-configuration-settings for values
+--       dap = {
+--         justMyCode = false,
+--         console = "integratedTerminal",
+--       },
+--       args = { "--log-level", "DEBUG", "--quiet" },
+--       runner = "pytest",
+--     })
+--   }
+-- })
 -- Set theme "center telescope"
 lvim.builtin.telescope.theme = "ivy"
 

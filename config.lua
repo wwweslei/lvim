@@ -1,3 +1,4 @@
+require 'keymappings' -- keymappings
 -- install plugins
 lvim.plugins = {
   require 'plugins.aerial',                -- tags
@@ -9,7 +10,7 @@ lvim.plugins = {
   require 'plugins.eyeliner',              -- ff jump
   require 'plugins.colorful-winsep',       -- decora as janelas
   require 'plugins.better-escape',         -- j j <esc>
-  require 'plugins.neotest',               -- testes
+  -- require 'plugins.neotest',               -- testes
   require 'plugins.troble',                -- ferramenta de diagnosticos
   require 'plugins.nump',                  -- jump to the line
   require 'plugins.glow',                  -- render markdown
@@ -44,7 +45,7 @@ lvim.plugins = {
   require 'plugins.tmux',                  -- tmux
   require 'plugins.tools',                 -- tools
   require 'plugins.neoscroll',             -- smooth scroll
+  require 'plugins.live-server',           -- live server
+  require 'plugins.codeium',               -- codeium
 }
-
-require 'options'     -- options
-require 'keymappings' -- keymappings
+require 'options'                          -- options

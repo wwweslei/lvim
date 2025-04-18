@@ -9,14 +9,14 @@ return {
         enabled = true,
         auto_refresh = true,
         keymap = {
-          jump_prev = "[[",
-          jump_next = "]]",
+          jump_prev = "<c-[>",
+          jump_next = "<c-]>",
           accept = "<c-l>",
           refresh = "gr",
           open = "<M-CR>"
         },
         layout = {
-          position = "right",   -- | top | left | right
+          position = "right", -- | top | left | right
           ratio = 0.4
 
         },
@@ -40,7 +40,7 @@ return {
         cvs = false,
         ["."] = false,
       },
-      copilot_node_command = 'node',   -- Node.js version must be > 16.x
+      copilot_node_command = 'node', -- Node.js version must be > 16.x
       server_opts_overrides = {},
     })
   end,
